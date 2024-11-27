@@ -1,14 +1,14 @@
 #include "efilter.hpp"
 
 eFilter::eFilter(double (*transmitance)(double input)){
-	this->transmitance = transmitance;	
+	this->_transmitance = transmitance;	
 }
 eFilter::~eFilter(){
-	this->transmitance = NULL;	
+	this->_transmitance = NULL;	
 }
 
 double eFilter::operator*(const double &number){
-	return this->transmitance(number);
+	return this->_transmitance(number);
 }
 std::vector<double> eFilter::operator*(std::vector<double> tab){
 

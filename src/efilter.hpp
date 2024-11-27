@@ -7,14 +7,14 @@
 class eFilter
 {
 	public:
-	eFilter(double (*transmitance)(double input));
-	~eFilter();
+		eFilter(double (*transmitance)(double input));
+		~eFilter();
 	
-	double operator*(const double &number);
-	std::vector<double> operator*(std::vector<double> tab);
+		double operator*(const double &number);
+		std::vector<double> operator*(std::vector<double> tab);
 	
 	private:
-	double (*transmitance)(double input);
+		double (*_transmitance)(double input);
 	
 };
 
